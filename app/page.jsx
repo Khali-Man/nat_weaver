@@ -22,7 +22,10 @@ export default function HomePage() {
             style={{ width: "100%", height: "100%", objectFit: "cover", animation: "kenBurns 12s ease-out both" }}
           />
         </div>
-        <div className="img-overlay" />
+        <div style={{
+          position: "absolute", inset: 0,
+          background: "linear-gradient(to top, rgba(28,40,38,0.85) 0%, rgba(28,40,38,0.5) 50%, rgba(28,40,38,0.3) 100%)",
+        }} />
         <div style={{
           position: "relative", zIndex: 2, height: "100%",
           display: "flex", flexDirection: "column",
@@ -81,7 +84,11 @@ export default function HomePage() {
                 onMouseEnter={(e) => (e.target.style.transform = "scale(1.04)")}
                 onMouseLeave={(e) => (e.target.style.transform = "scale(1)")}
               />
-              <div style={{ position: "absolute", bottom: 24, left: 24 }}>
+              <div style={{
+                position: "absolute", inset: 0,
+                background: "linear-gradient(to top, rgba(28,40,38,0.75) 0%, rgba(28,40,38,0.1) 50%, transparent 100%)",
+              }} />
+              <div style={{ position: "absolute", bottom: 24, left: 24, zIndex: 2 }}>
                 <div className="eyebrow" style={{ color: "#C4A882" }}>{item.label}</div>
               </div>
             </div>
